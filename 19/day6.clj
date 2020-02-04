@@ -35,7 +35,7 @@
         +
         depth ; start with COM's depth (number of COM's total orbits)
         (map  ; add total numbmer of orbits below COM
-            #(build-graph % orbits (inc depth)) ; recurse, increasing the depth
+            #(count-edges % orbits (inc depth)) ; recurse, increasing the depth
             (get orbits COM []) ; objects that orbit COM
         )
     )
